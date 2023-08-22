@@ -500,6 +500,7 @@ footer
         transition: 0.7s;
         text-align: center;
     }
+
     .home
     {
         display: block;
@@ -529,6 +530,7 @@ footer
         object-fit: cover;
 
     }
+    
     .home img{
         margin-top: 24px;
     }
@@ -536,12 +538,59 @@ footer
 }
 
 @media (max-width:950px) {
-    ul li{
-        display: none;
-    }
-    .logo-1
+    .list{
+         position: absolute;
+         top: 100%;
+         flex-direction: column;
+         text-align: right;
+         right: 0;
+          left: 0;
+         background-color: black;
+      
+         transition: 0.4s;
+         opacity: 0;
+         width: 70%;
+        
+/*          
+         position: fixed;
+            top: -400px;
+            z-index: -1;
+            margin-top: -15px;
+            right: 0;
+            left: 0;
+            width: 200px;
+            background-color: black;
+            display: inline-block;
+            transition: top .4s;
+            margin-top: 0; */
+
+    } 
+
+
+
+  
+    .active{
+            opacity: 1;
+               
+      }
+    .list a{
+        display: block;
+        padding: 1.2rem;
+        margin: 1.2rem;
+        /* border-bottom: 2px solid #ffff; */
+        color: #fff;
+      
+      }
+       a:hover
+      {
+         background-color: red;
+      }
+ 
+
+    .logo-1 img
     {
         display: block;
+
     }
     
 }
@@ -556,9 +605,11 @@ footer
     }
     .logo
     {
-        margin-bottom: 18px;
+        /* margin-bottom: 18px; */
         width: 70px;
     }
+
+
     
 }
 /* @media (max-width:950px) {
@@ -569,10 +620,8 @@ footer
     }
     
 } */
-.logo-1
-{
-    display: none;
-}
+
+
 .sun
 {
     background-color: #000;
@@ -582,6 +631,10 @@ footer
 {
     background-color: #fff;
 }
+.logo-7{
+  
+    -webkit-user-drag: auto;
+}
 
 
 
@@ -590,8 +643,11 @@ footer
 <body>
 
     <header class="fffff">
-        <a href="" class="logo"><img src="index/harish chauhan.png" alt="" w></a>
-        <div class="logo-1" id="logo"><a href=""><img src="index/menu_FILL0_wght400_GRAD0_opsz48.png" alt=""></a></div>
+        <a href="" class="logo"><img src="index/harish chauhan.png" alt="" ></a>
+        <div class="logo-7" id="logo"><img src="index/menu_FILL0_wght400_GRAD0_opsz48.png" alt="" class="hars" sty>
+
+
+        </div>
 
 
         <ul class="list">
@@ -930,20 +986,18 @@ footer
     // }
 
 
-    function  write()
-    {
-        var email = document.getElementById("email").value;
+    
+    let menu = document.querySelector(".hars");
+        let list = document.querySelector(".list");
 
-        if(email == "")
-        {
-            document.getElementById("helllo").innerHTML  ="please enter email";
-            return false;
+        menu.addEventListener("click", function () {
+            list.classList.toggle("active");
 
 
-        }
 
 
-    }
+        })
+
     </script>
 
 </body>
