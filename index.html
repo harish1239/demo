@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+  
+    header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        padding: 30px 18%;
+        transition: 0.4s;
+
+
+
+    }
+
+    .logo img {
+        max-width: 100%;
+        width: 90px;
+        height: auto;
+
+    }
+
+    .list {
+        display: flex;
+        list-style: none;
+        text-align: center;
+        justify-content: center;
+
+
+    }
+
+    .list li {
+        position: relative;
+
+    }
+
+    .list a {
+        text-decoration: none;
+        padding: 10px 50px;
+        font-weight: 500;
+        /* font-family: 'Roboto', sans-serif; */
+        color: #000;
+        font-size: 20px;
+
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a.davload {
+        padding: 12px 50px;
+        background: transparent;
+        border: 2px solid #5a1a2a;
+        border-radius: 30px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: 0.7s;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    a.davload:hover {
+        background-color: #ccc;
+
+        transform: scale(1.1);
+
+
+    }
+
+    .list a::after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: #5a5a5a;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        transition: 0.4s;
+
+    }
+
+    body {
+        /* font-family: Arial, Helvetica, sans-serif; */
+        font-family: 'Mukta', sans-serif;
+        /* font-family: 'Roboto', sans-serif;
+        font-family: 'Rubik', sans-serif;
+         */
+
+
+    }
+
+    .list a:hover::after {
+        width: 100%;
+    }
+
+   
+    section {
+        padding: 100px 18%;
+    }
+
+    .home {
+        min-height: 100vh;
+        width: 100%;
+        /* height: 100%; */
+        background: url(index/background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+        background-position: center;
+        align-items: center;
+        /* grid-gap: 17rem; */
+    }
+
+
+
+    .home h1 {
+        font-size: 90px;
+        font-weight: 500;
+        margin: 10px 0px 25px;
+        line-height: 1;
+
+    }
+
+    .home h5 {
+       margin-bottom: 23px;
+       font-size: 19px;
+       font-weight: 500;
+
+    }
+
+    span {
+        color: red;
+    }
+
+ a .fa-brands {
+        width: 40px;
+        font-size: 40px;
+        margin: 20px 20px;
+      
+    }
+
+    a .fa-brands:hover {
+        color: red;
+        border-radius: 100%;
+        transition: 0.7s;
+        transform: rotate(360deg);
+        
+    }
+
+    .about {
+        padding: 15px 20%;
+        background-color: red;
+        margin: 10px 20px;
+        color: #fff;
+        border-radius: 90px;
+        position: relative;
+        top: 30px;
+    }
+
+    .about:hover {
+        transform: scale(1.1);
+        transition: 0.4s;
+        background: transparent;
+        border: 2px solid black;
+        color: black;
+    }
+
+    .home p {
+        margin: 10px 20px;
+        margin-top: 30px;
+    }
+
+    .home h3 {
+        color: red;
+        margin: 10px 20px;
+
+
+    }
+
+    .hand {
+        font-size: 40px;
+    }
+
+
+
+
+
+
+    .box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .box-1 {
+        /* box-shadow: 0px 0px 10px rgba(0,0,0,0.7); */
+        padding: 45px 45px 45px 45px;
+        transition: 0.7s;
+        cursor: pointer;
+
+    }
+
+    .box-1 h3 {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .box-1 img {
+        width: 60px;
+        max-width: 100%;
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .box-1 p {
+        color: #ccc;
+        line-height: 29px;
+    }
+
+    .box :hover {
+        box-shadow: 18px 0px 87px 0px rgba(18 15 70/ 7%);
+        border-radius: 12px;
+        will-change: transform;
+        transform: perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05, 1.05, 1.05);
+        background: #ffffffff;
+        color: black;
+    }
+    .about-1
+    {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+        align-items: center;
+        text-align: center;
+        grid-gap: 10rem;
+    }
+    .about-2 img
+    {
+        max-width: 100%;
+        width: 490px;
+        height: auto;
+
+    }
+    .about-1 h2
+    {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 8px 0px 25px;
+    }
+    .about-1 h3
+    {
+        font-size: 20px;
+        color: red;
+        text-align: left;
+        font-weight: 500;
+        margin: 8px 0px 25px;
+        line-height: 20px;
+        margin-left: 29px;
+    }
+    .about-1 p{
+        color: #ccc;
+        line-height: 29px;
+        max-width: 500px;
+         font-weight: 500;
+    }
+
+    .mod
+    {
+      text-align: center;  
+
+    }
+    .mod h2{
+        font-size: 40px;
+        font-size: 500;
+    }
+    .mod p{
+        color: #ccc;
+        line-height: 29px;
+    }
+    .protofllow
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+        grid-gap: 6rem;
+        align-items: center;
+        margin-top: 5rem;
+        text-align: center;
+    }
+  .layer
+  {
+    background: linear-gradient(transparent, rgba(0,0,0,0.5) 0%, #5a1a2a);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    left: 0;
+    border-radius: 12px;
+    transition: 0.4s;
+    /* opacity: 0; */
+    
+  }
+  .layer:hover{
+  
+    background: linear-gradient(transparent, rgba(0,0,0,0.5) 0%, #cccc);
+  }
+
+
+  /* .layer h5{
+    position: absolute;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: 0.4s;
+    opacity: 0;
+    
+  } */
+  .layer h3
+  {
+    position: absolute;
+    width: 100%;
+    font-size: 25px;
+    font-size: 500;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  .layer:hover h3
+  {
+    bottom: 52%;
+    opacity: 1;
+    transition: 0.4s;
+
+  }
+
+  
+
+  .col
+  {
+    position: relative;
+  }
+  .col img{
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    height: auto;
+    width: 550px;
+    overflow: hidden;
+
+  }
+  /* nav.stikey{
+    position: fixed;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  background-color: forestgreen;
+  justify-content: center;
+  text-align: center;
+
+} */
+header.stikey
+{
+    /* background-color: red; */
+    padding: 13px 18%;
+     /* box-shadow: 0px 0px 10px rgba(15 17 19); */
+     color: black;
+     background: #fff;
+     z-index: 10000;
+
+}
+
+.profr
+{
+    text-align: center;
+    font-size: 2vw;
+}
+
+
+
+
+.formating
+{
+  width: 64%;
+  background: #88067f0e;
+  margin: 100px auto;
+  padding: 70px 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(index/banner.jpg);
+  background-size: cover;
+  border-radius: 12px;
+
+}
+.email H1{
+    color: #fff;
+    margin: 20px 30px;
+}
+.email input
+{
+    max-width: 100%;
+    width: 500px;
+    padding: 12px 15px;
+    color: #000;
+    border-radius: 6px;
+    border: 0;
+    outline: 0;
+    margin: 0px 10px 20px 0;
+    
+
+}
+.btn
+{
+    max-width: 100%;
+    width: 180px;
+    padding: 12px 15px;
+    color: #000;
+    border-radius: 6px;
+    border: 0;
+    outline: 0;
+    margin: 0px 10px 20px 0;
+
+
+}
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.prof{
+    text-align: center;
+    font-size: 2vw;
+}
+footer
+{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+}
+
+
+
+
+
+
+
+@media (max-width:925px) {
+    header
+    {
+        padding: 16px 3%;
+        transition: 0.3s;
+      
+    }
+  
+    header.stikey{
+        padding: 10px 3%;
+        transition: 0.7s;
+    }
+   
+   
+    section{
+        padding: 70px 3%;
+        transition: 0.7s;
+        text-align: center;
+    }
+    .home
+    {
+        display: block;
+        text-align: center;
+   
+    
+
+    }
+
+  
+    .home h1{
+        font-size: 50px;
+    }
+    .home .icon
+    {
+        font-size: 20px;
+    }
+    .about-1
+    {
+        display: block;
+    }
+
+    section{
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        overflow: hidden;
+        object-fit: cover;
+
+    }
+    .home img{
+        margin-top: 24px;
+    }
+  
+}
+
+@media (max-width:950px) {
+    ul li{
+        display: none;
+    }
+    .logo-1
+    {
+        display: block;
+    }
+    
+}
+@media (max-width:1400px) {
+        a.davload
+    {
+      font-size: 12px;
+      text-align: center;
+      padding: 9px;
+      
+        
+    }
+    .logo
+    {
+        margin-bottom: 18px;
+        width: 70px;
+    }
+    
+}
+/* @media (max-width:950px) {
+    html,body{
+       overflow-x: hidden;
+
+       
+    }
+    
+} */
+.logo-1
+{
+    display: none;
+}
+.sun
+{
+    background-color: #000;
+    color: #fff;
+}
+.moon
+{
+    background-color: #fff;
+}
+
+
+
+</style>
+
+<body>
+
+    <header class="fffff">
+        <a href="" class="logo"><img src="index/harish chauhan.png" alt="" w></a>
+        <div class="logo-1" id="logo"><a href=""><img src="index/menu_FILL0_wght400_GRAD0_opsz48.png" alt=""></a></div>
+
+
+        <ul class="list">
+            <li><a href="">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#mod">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#skill">Skills</a></li>
+            
+
+        </ul>
+        <a href="index/harish pdf.pdf"  download class="davload">Download cv</a>
+      
+
+    </header>
+    
+
+
+
+
+    <section class="home" id="Home">
+        <div class="sec">
+            <h3>Hello,<span class="hand">👋</span> I'am</h3>
+            <h1>Harish Chauhan</h1>
+            <h5>A Creative Desinger<span>Form Panchkula Chandigarh</span></h5>
+            <p>I am Creative Desinger based In Panchkula, Chandigarh and I'am Very Passionate and dEcided to my work</p>
+
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=100089597078444"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://instagram.com/chauhanabhi2213?igshid=ZDc4ODBmNjlmNQ=="><i class="fa-brands fa-instagram"></i> </a>
+                <a href="https://www.linkedin.com/in/harsh-chauhan-728245258"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://youtube.com/@WebsiteSingh-el9ik"><i class="fa-brands fa-youtube"></i></a>
+                <!-- <a href=""><i class="fa-brands fa-twitter"></i></a> -->
+            </div>
+         <a href="#about" class="about">About</a>
+
+        </div>
+         
+        <div class="home-img">
+            <img src="index/jimes_-removebg-preview.png" alt="">
+        </div>
+    </section>
+
+    
+
+    <section class="value-seaction">
+        <div class="box">
+            <div class="box-1">
+                <div class="box-2">
+                    <img src="index/light.jpg" alt="">
+                    <h3>Pixel Method Desinger</h3>
+                    <p>Most Common Method For Desinging websites that will on Desktop is responsive and adaptive
+                        desingn. </p>
+                </div>
+            </div>
+            <div class="box-1">
+                <div class="box-2">
+                    <img src="index/pen.jpg" alt="">
+                    <h3>Pixel Method Desinger</h3>
+                    <p>Most Common Method For Desinging websites that will on Desktop is responsive and adaptive
+                        desingn. </p>
+                </div>
+            </div>
+            <div class="box-1">
+                <div class="box-2">
+                    <img src="index/light.jpg" alt="">
+                    <h3>Pixel Method Desinger</h3>
+                    <p>Most Common Method For Desinging websites that will on Desktop is responsive and adaptive
+                        desingn. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about-1"  id="about">
+        <div class="about-2">
+            <img src="index/man.jpg" alt="">
+        </div>
+        <div class="text-12">
+            <h3>i'am a Desinger</h3>
+            <h2>I can Desingn Anything you want</h2>
+            <p class="text-center">Prototyping in web design is a process used for testing website designs before they're finalized and
+                developed. It involves creating a model of the website that displays how the final version will look and
+                function. Prototypes can range from simple sketches of the website layout to interactive simulations
+                that mimic how the actual website will behave.</p>
+                <a href="" class="about">Hire'me</a>
+        </div>
+        
+    </section>
+
+
+
+
+
+    <section class="mod" id="mod">
+
+       <div class="moderan">
+         <h3>Protfolio</h3>
+         <h2>My Amazing Website Work</h2>
+         <p>Most Common Method For Desinging websites that will on Desktop is responsive and adaptive
+            desingn. </p>
+       </div>
+    
+
+          <div class="protofllow">
+            <div class="col">
+                <img src="index/modearn 5.jpg" alt="">
+                <div class="layer">
+                    <h3>Web Desinger</h3>
+                    <h5>Devloper</h5>
+                </div>
+            </div>
+            
+
+     
+          
+         
+            <div class="col">
+                <img src="index/moderan 3.jpg" alt="">
+                <div class="layer">
+                    <h3>Web Desinger</h3>
+                    <h5>Devloper</h5>
+                </div>
+            </div>
+        
+       
+            <div class="col">
+                <img src="index/moderan 6.jpg" alt="">
+                <div class="layer">
+                    <h3>Web Desinger</h3>
+                    <h5>Devloper</h5>
+                </div>
+         
+          </div>
+        
+            <div class="col">
+                <img src="index/modern 2.jpg" alt="">
+                <div class="layer">
+                    <h3>Web Desinger</h3>
+                    <h5>Devloper</h5>
+                </div>
+            </div>
+          
+         
+            <div class="col">
+                <img src="index/modern .jpg" alt="">
+                <div class="layer">
+                    <h3>Web Desinger</h3>
+                    <h5>Devloper</h5>
+                </div>
+            </div>
+            
+            <div class="col">
+                <img src="index/moderan 3.jpg" alt="">
+                <div class="layer">
+                    <h3>Web Desinger</h3>
+                    <h5>Devloper</h5>
+                </div>
+            </div>
+      
+
+       </div>
+       
+    </section>
+
+   
+    <section class="value-seaction" id="skill">
+        <h2 class="profr">My Profeesinal Skills</h2>
+        <div class="box">
+            <div class="box-1">
+                <div class="box-2">
+                    <img src="index/31f11147f89dbd855a9b948e2ce643ea2f41c0a9-480x480.png" alt="">
+                    <h3>Html</h3>
+                    <p>Most Common Method For Desinging websites that will on Desktop is responsive and adaptive
+                        desingn. </p>
+                </div>
+            </div>
+            <div class="box-1">
+                <div class="box-2">
+                    <img src="index/css.png" alt="">
+                    <h3>Css</h3>
+                    <p>Most Common Method For Desinging websites that will on Desktop is responsive and adaptive
+                        desingn. </p>
+                </div>
+            </div>
+            <div class="box-1">
+                <div class="box-2">
+                    <img src="index/js.png" alt="">
+                    <h3>Js</h3>
+                    <p>Most Common Method For Desinging websites that will on Desktop is responsive and adaptive
+                        desingn. </p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="box-2">
+                    <img src="index/logo booo.png" alt="" width="100px">
+                    <h3>Bootstrap</h3>
+                    <p>Most Common Method For Desinging websites that will on Desktop is responsive and adaptive
+                        desingn. </p>
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+      
+
+    <h2 class="prof">Basic Knowlage in Languages</h2>
+
+    <section class="value-seaction">
+        <div class="box">
+            <div class="box-1">
+                <div class="box-2">
+                    <img src="index/wordpress logo.png" alt="">
+                    <h3>Wordpress</h3>
+                    <p>Most Common Method For Desinging websites that will on Desktop is responsive and adaptive
+                        desingn. </p>
+                </div>
+            </div>
+            <div class="box-1">
+                <div class="box-2">
+                    <img src="index/c++.png" alt="">
+                    <h3>C++</h3>
+                    <p>Most Common Method For Desinging websites that will on Desktop is responsive and adaptive
+                        desingn. </p>
+                </div>
+            </div>
+            <div class="box-1">
+                <div class="box-2">
+                    <img src="index/light.jpg" alt="">
+                    <h3>Pixel Method Desinger</h3>
+                    <p>Most Common Method For Desinging websites that will on Desktop is responsive and adaptive
+                        desingn. </p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="box-2">
+                    <img src="index/react .jpg" alt="">
+                    <h3>React js</h3>
+                    <p>Most Common Method For Desinging websites that will on Desktop is responsive and adaptive
+                        desingn. </p>
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+
+
+
+    <section class="formating" id="contact">
+        
+        
+        
+        <div class="email">
+            <h4 class="" style="color: red; margin-bottom: 60px; text-align: center f; font-size: 2vw; display: flex; align-items: center; justify-content: center;">Get In Teach</h4>
+            
+            <div class="email-formating">
+           
+            </div>
+    
+       
+            <div class="inpu">
+                <form  onsubmit=" write()">
+     
+                <input type="text" name="" id="email" placeholder="Enter Email">
+                <span id="helllo"></span>xcvb
+                <button class="btn">Submit</button>
+                               
+            </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copy&copy; harish chauhan Protfolio.com</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <script>
+         const header = document.querySelector("header");
+
+         window.addEventListener("scroll", function(){
+            header.classList.toggle("stikey", window.scrollY > 0)
+         })
+
+         
+         
+
+
+         const sr = ScrollReveal({
+            distance: '45px',
+            duration: 2700,
+            reset: true
+         })
+
+         sr.reveal('.sec', {delay:350, origin:'left'})
+         sr.reveal('.img-photo', {delay:350, origin:'right'})
+         sr.reveal('.box,.about-2,.moderan,.protofllow', {delay:350, origin:'bottom'})
+
+         
+    function sun(){
+        var ele = document.body;
+         ele.classList.toggle("sun");
+    }
+
+    // function moon(){
+    //     var ele = document.body;
+    //      ele.classList.toggle("moon");
+
+    //      if(document.body.classList.contains("moon"))
+    //      {
+    //         ele.src = "index/sun.png"
+    //      }
+    //      else
+    //      {
+    //         ele.src = "index/moon.png"
+    //      }
+    // }
+
+
+    function  write()
+    {
+        var email = document.getElementById("email").value;
+
+        if(email == "")
+        {
+            document.getElementById("helllo").innerHTML  ="please enter email";
+            return false;
+
+
+        }
+
+
+    }
+    </script>
+
+</body>
+
+</html>
